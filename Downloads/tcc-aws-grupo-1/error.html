@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de erro">
+    <title>Erro 404</title>
+    <style>
+        body { /*configs de fundo de tela*/
+            background: rgb(2, 0, 36);
+            /*cor fallback para caso o gradient falhe*/
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 56%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .popup { /*a janela popup maior*/
+            background-color: #fff;
+            border: 1px solid #ccc;
+            width: 600px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .popup-header { /*janela popup azul interna*/
+            background-color: #3498db;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .popup-content { /*conteudo do texto*/
+            padding: 20px;
+        }
+
+        .popup-text { /*texto*/
+            font-size: 16px;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .popup-link { /*estilização da palavra "home" que é um link e leva para o index*/
+            color: #fbfbfb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .popup-link:hover { /*hover do link, o que aparece quando se passa o mouse por cima*/
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup">
+        <div class="popup-header">
+            <div class="popup-content">
+                <p class="popup-text">Ops, página não encontrada. Volte na <a class="popup-link"
+                        href="index.html">Home</a> e encontre os seus futuros contratados.</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

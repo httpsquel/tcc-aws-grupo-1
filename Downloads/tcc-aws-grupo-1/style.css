@@ -1,0 +1,152 @@
+.home-page {
+    background: rgb(2, 0, 36);
+    /*cor fallback para caso o gradient falhe*/
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 56%);
+    /*gradiente*/
+    justify-content: center;
+    /*centraliza o conteúdo de forma horizontal no body*/
+    overflow-y: hidden;
+    /*impedir a rolagem vertical do indice*/
+
+}
+
+.text { /*estiliza o H1*/
+    font-family: "Russo One", sans-serif;
+    font-size: 5rem;
+    color: #ffff;
+    text-align: center;/*alinhar o texto no centro da pag*/
+    margin: 100px 0 0;
+    text-transform: uppercase; /*transforma o texto todo em letra maiúscula*/
+    letter-spacing: 9px; /*espaçamento entre letras*/
+    position: relative;/*posiciona o elemento em relação a si mesmo*/
+    opacity: 0;
+    animation: fadeInText 0s 1.1s both; /*animação de sumir e voltar o texto*/
+}
+
+.text-block { /*cria o bloco colorido*/
+    position: relative;
+    overflow: hidden;
+}
+
+.text-block:after { /*cria um elemento ~falso~ depois do principal, com o pseudo-elemento after*/
+    content: "";
+    position: absolute; /*posiciona o elemento em relação ao pai, o .text.block*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #c48e84;
+    transform: translateX(-100%); /*de inicio move o elemento todo pra esquerda, ocultando ele da tela*/
+    animation: enlargeBlock .5s .6s both, revealBlock .5s 1.1s both; /*chama as duas animações do keyframes*/
+}
+
+@keyframes fadeInText { /*cria o elemento de fade, sumiço no texto*/
+    from {
+        opacity: 0; /*faz o texto ficar invisivel*/
+    }
+
+    to {
+        opacity: 1;/*faz o contrário*/
+    }
+}
+
+@keyframes enlargeBlock { /*faz o movimento de o bloco crescer, da esquerda para a direita*/
+    from {
+        width: 0;/*começa estreito*/
+    }
+
+    to {
+        width: 100% /*vai crescendo até atingir a largura total da tela*/
+    }
+}
+
+@keyframes revealBlock { /*move o bloco*/ 
+    from {
+        transform: translateX(0); /*local inicial no eixo horizontal*/
+    }
+
+    to {
+        transform: translateX(100%);/*local final*/
+    }
+}
+
+.botoes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.botao-img {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.botao-img img { /*padroniza todas as nossas fotos e faz a borda redonda*/
+    width: 240px;
+    border-radius: 100px;
+}
+
+
+/*Estilização das páginas de currículo*/
+
+.cabecalho {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.contato{
+    margin-left: 7rem;
+}
+.contato h1 {
+    font-family: "Russo One", sans-serif;
+    font-size: 4.5rem;
+    height: 15vh;
+}
+
+.contato h3 {
+    font-family:'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight:200;
+    height: 2vh;
+}
+
+.contato p {
+    font-family:'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+.redes {
+    margin-top: 1vh;
+    position: absolute;
+    right: 7rem;  
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 14rem;
+}
+
+.objetivo {
+    font-family: 'Poppins', sans-serif;
+    margin: 0 7rem 0 7rem;
+}
+
+.objetivo h2 {
+font-size: 1.8rem;
+}
+
+.objetivo p {
+    font-size: 1.2rem;
+}
+
+.formacao {
+    font-family: 'Poppins', sans-serif;
+    margin: 0 7rem 0 7rem;
+}
+
+.formacao p {
+    margin-left: 2rem;  
+}
+
